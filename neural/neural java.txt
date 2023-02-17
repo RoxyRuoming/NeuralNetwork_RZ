@@ -1,0 +1,67 @@
+Yes, creating a neural network in Java is a great project to include in your resume. It shows that you have advanced knowledge of Java and an understanding of machine learning concepts. Neural networks are a popular topic in the field of artificial intelligence and machine learning, and demonstrating your ability to create one using Java can be a valuable addition to your resume.
+
+When listing your neural network project on your resume, be sure to include details about the problem you were trying to solve, the design and architecture of the network, the tools and libraries you used, and the results of the project. If possible, include any performance metrics or improvements you achieved through the project.
+
+Overall, including a neural network project on your resume can demonstrate your skills in Java, as well as your understanding of machine learning and AI concepts, making you a competitive candidate for relevant positions.
+----
+1. introduction
+neural network - AI ML SL DL(neural networks)
+neurals - many layers
+
+2. why
+learn an absolute ton of stuff
+understand the final sofeware very well
+AI is the future
+
+3. learining method (getting the most out of this course)
+watch the video and do a unique version
+follow the teacher (treat it like a lab)
+math - do not need to understand it deeply
+github
+
+4. language
+python is liar. behind the Python, the magic is from C++
+this course purely uses java to implement what we want
+
+5.neurons
+simple model
+analog system
+
+6.perceptron
+algorithm perceptron
+math concept - weighted sum/ biasd value(+/-)
+
+7.A project with Junit support   ? 去youtube学习一下怎么vscode junit
+
+8.simple coding
+code a simple perceptron style neuron
+
+9.source code
+10.eclipse formatters
+11-14.logic gates
+15. linear separability -- activation function decide the separability - we can change it
+eg: 
+// activation function
+        return  z > 0 ? 1.0: 0.0;
+
+16. some layer terminology 
+network the neurons together
+17. labelling weights (结合layers图理解这个公式)
+18-19. matrix
+21-29. genereate real matrix using some method
+
+
+-----
+英文积累
+from a scratch
+I want to familiarize you with it
+we are gonna disuss it in detail later on
+连接词: anyway, so, btw
+
+----- to figure out
+the working logic of neuron
+
+
+
+
+
