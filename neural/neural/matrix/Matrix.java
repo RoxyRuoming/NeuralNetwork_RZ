@@ -3,6 +3,7 @@ package neural.matrix;
 import java.util.Arrays;
 
 import javax.sql.RowSet;
+import javax.sql.RowSetEvent;
 
 public class Matrix {
     private int rows;
@@ -44,6 +45,27 @@ public class Matrix {
             result.a[i] = producer.produce(i,a[i]); 
         }
         return result;
+    }
+
+    public Matrix multiply(Matrix m) {
+        Matrix result = new Matrix(rows, m.cols);
+        assert cols == m.rows: "Cannot multiply wrong number of rows vs cols ";
+        
+        for(int row = 0; row < result.rows; row++) {
+            for(int n=0; n < cols; n++) { 
+                for(int col = 0; col< result.cols; col++) { // this order is the fastest! loop from row, n, to col
+                // result.a[row * result.cols + col] = 7.0;
+
+                    result.a[row*result.cols+col] += a[row * cols + n] * m.a[col+n*m.cols];
+                    // System.out.println(a[row * cols + n] + " ");
+                    // System.out.println(m.a[col+n*m.cols] + " ");
+                }
+                System.out.println();
+            }
+        }
+
+        return result;
+
     }
 
     public double get(int index) {

@@ -3,7 +3,6 @@ package matrix;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-import javax.xml.transform.Source;
 
 import org.junit.Test;
 
@@ -11,6 +10,43 @@ import neural.matrix.Matrix;
 
 
 public class MatrixTest { 
+    @Test
+    public void textMultiply() {
+        Matrix m1 = new Matrix(2,3,i->i);
+        Matrix m2 = new Matrix(3,2,i->i);
+
+        // In matrix multiplication, the number of columns in the first matrix 
+        // should be equal to the number of rows in the second matrix.
+
+        double[] expectedValues = {10, 13 ,28 ,40};
+        Matrix expected = new Matrix(2, 2, i->expectedValues[i]);
+
+        // System.out.println(m1);
+        // System.out.println(m2);
+        Matrix result = m1.multiply(m2);
+
+        assertTrue(expected.equals(result));
+
+        // System.out.println(result);
+    }
+
+    @Test
+
+    public void textMultiplySpeed() {
+        int rows = 500;
+        int cols = 500;
+        int mid = 50;
+
+        Matrix m1 = new Matrix(rows,mid,i->i);
+        Matrix m2 = new Matrix(mid,cols,i->i);
+
+        // var start = System.currentTimeMillis();
+        // m1.multiply(m2);
+        // var end = System.currentTimeMillis();
+
+        // System.out.printf("Matrix multiplicantion time taken: %dms\n", end-start);
+    }
+
     @Test
 
     public void testEquals(){
@@ -42,7 +78,7 @@ public class MatrixTest {
         Matrix expected = new Matrix(3,4,i -> x * 0.5 * (i-6));
         Matrix result = m.apply((index, value)-> x * value);
         
-        System.out.println(result);
+        // System.out.println(result);
         assertTrue(result.equals(expected));
         assertTrue(Math.abs(result.get(1)+ 1.25000) < 0.00001);
 
